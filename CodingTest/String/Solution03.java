@@ -1,4 +1,4 @@
-package CodingTest.문자열;
+package CodingTest.String;
 
 import java.util.Scanner;
 
