@@ -28,8 +28,6 @@ public class Solution08 {
                     System.out.println("NO");
                     return;
                 }
-
-                
             }
 
             else if(!Character.isAlphabetic(rchar))
@@ -46,9 +44,6 @@ public class Solution08 {
         }
 
         System.out.println("YES");
-
-
-        
     }
     
 }
