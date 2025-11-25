@@ -1,3 +1,4 @@
+package CodingTest.Array;
 import java.util.Scanner;
 
 public class Solution11 {
