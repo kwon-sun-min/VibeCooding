@@ -1,5 +1,6 @@
 package CodingTest.Faster;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution01_v2 {
@@ -30,22 +31,32 @@ public class Solution01_v2 {
 
         while(c < n+m)
         {
+            if(p < n && q < m)
+            {
+                if(nlist[p] <= mlist[q])
+                {
+                    Tlist[c++] = nlist[p++];
+                }
 
-            if(nlist[p] < mlist[q])
+                else if(nlist[p] >= mlist[q])
+                {
+                    Tlist[c++] = mlist[q++];
+                }
+            }
+
+            else if(p >= n)
+            {
+                Tlist[c++] = mlist[q++]; 
+            }
+
+            else if(q >= m)
             {
                 Tlist[c++] = nlist[p++];
             }
 
-            else if(nlist[p] > mlist[q])
-            {
-                Tlist[c++] = mlist[q++];
-            }
-
-            
-
         }
 
-        System.out.println(Tlist);
+        System.out.print(Arrays.toString(Tlist));
     }
     
 }
