@@ -57,6 +57,7 @@ public class Solution01_v2 {
         }
 
         System.out.print(Arrays.toString(Tlist));
+        sc.close();
     }
     
 }
