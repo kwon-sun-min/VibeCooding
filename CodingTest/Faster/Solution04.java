@@ -2,40 +2,40 @@ package CodingTest.Faster;
 
 import java.util.Scanner;
 
-public class Solution03_v2 {
+public class Solution04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int l = sc.nextInt();
         int[] list = new int[n];
+        int m = sc.nextInt();
 
-        int max = 0;
+        int answer = 0;
         int sum = 0;
-
+        int p = 0;
 
         for (int i = 0; i < list.length; i++) 
         {
             list[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < l; i++) 
-        {
-            sum += list[i];
-        }
-
-        if(max < sum) max = sum;
-
-        for (int i = l; i < list.length; i++) 
-        {
-            sum += list[i];
-            sum -= list[i-l];
-            if(max < sum) max = sum;
-        }
-
-
-        System.out.println(max);
-        sc.close();
         
+        for (int i = 0; i < list.length; i++) 
+        {
+            sum += list[i];
+            
+            while(sum > m)
+            {
+                sum -= list[p++];
+            }
+
+            if(sum == m) answer++;
+        }
+
+        System.out.println(answer);
+
+
+
+
     }
     
 }
